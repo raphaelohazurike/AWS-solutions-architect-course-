@@ -1,0 +1,31 @@
+SSH into:      ‘ssh -i keypair-location username@IP’ .(example: ssh -i C:\Users\RCOhazur\Downloads\AWSdown\kp.pem ec2-user@18.220.118.69)
+Access root account: sudo su
+Machine update: # yum update -y (-y makes all update go through without prompting admin)
+A shows the IP path: Ifconfig-
+Install htttpd: yum install -y httpd.x86_64
+Start apache or httpd system: systemctl start httpd.service
+get whatever is written to that URL: curl localhost: 80
+echo hello world into destination: echo “hello world” > /var/www/html/index.html [var/www is from apaches site]
+Find your region: hostname – f.(example ip-172-31-23-34-344.eu-west-3.compute.internal)
+sayhello world feature: “hello world from $(hostname -f)”> /var/www/html/index.html
+lsblk: shows you all the attached Root and EBS memory drives connected to your instance
+sudo nano: open 
+how long an instance has been running: uptime
+see how much dvolume drives are in your instance: lsblk
+Sudo mkfs -t ext4 /dev/xvdb: makes the directory 
+Sudo mkdir /data : makes the folder
+Sudo mount /dev/cvdb /data: mounts the data
+lookup DNS or dig DNS: gives IP info on that DNS example “dig stephane.com”
+EC2 Availability zones =S(curl -s http;//169.254.169.256/latest/meta-data/placement/availability-zone)
+aws configure: prompts you to configure security and access setting for AWS
+Ls ~/(path eg. .aws). means list whatever (files) are in this path.
+Cat ~/path(shows what is in those files)
+AWS --version : gives the version of th eaws CLI you’re running
+
+
+#!/bin/bash
+yum update -y
+yum install -y httpd.86_64
+systemctl start httpd.service
+systemctl enable httpd.service
+echo " wah gwarn from $(hostname -f)" > /var/www/html/index.html
