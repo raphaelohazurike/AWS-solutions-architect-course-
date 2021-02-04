@@ -24,8 +24,10 @@ AWS --version : gives the version of th eaws CLI you’re running
 
 
 #!/bin/bash
+sudo su
 yum update -y
-yum install -y httpd.86_64
+#-y is for saying yes whenever its prompted prompt 
+yum install -y httpd.x86_64
 systemctl start httpd.service
 systemctl enable httpd.service
 echo " wah gwarn from $(hostname -f)" > /var/www/html/index.html
